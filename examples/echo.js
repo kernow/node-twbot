@@ -18,6 +18,6 @@ bot.on('data', function(data){
 
 bot.on('mentioned', function(tweet){
    var text = tweet.text.substr(bot.account.screen_name.length + 1);
-   bot.update("@" + tweet.user.screen_name + " " + text);
+   bot.client.tweets.update("@" + tweet.user.screen_name + " " + text);
 });
 bot.startUserStream();
